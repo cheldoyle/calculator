@@ -1,0 +1,23 @@
+input {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20%;
+    padding-top: 20%;
+}
+.displayCurrentNums {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 1vmax;
+}
+.displayNums {
+    text-align: end;
+    margin: 0;
+    font-size: 1vmax;
+    padding-bottom: 0;
+}
+.calculatorSec {
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10%;
+}
