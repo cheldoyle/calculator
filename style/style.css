@@ -4,20 +4,52 @@ input {
     padding-bottom: 20%;
     padding-top: 20%;
 }
+textarea {
+    resize: none;
+    vertical-align: bottom;
+    width: 100%;
+    padding: 5%;
+    margin: 0;
+}
+textarea:hover {
+    cursor: default;
+}
 .displayCurrentNums {
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
     font-size: 1vmax;
+    border: black solid 2px;
 }
 .displayNums {
     text-align: end;
     margin: 0;
     font-size: 1vmax;
     padding-bottom: 0;
+    border: black solid 1px;
 }
 .calculatorSec {
-    margin-left: 40%;
-    margin-right: 40%;
-    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1%;
+}
+
+:root {
+    --color-background: #000119;
+    --stroke-width: calc(1em / 16);
+    --font-size: 30vmin;
+    --font-weight: 700;
+    --letter-spacing: calc(1em / 8);
+}
+input, textarea {
+    font-family: "Noto Sans JP", sans-serif;
+    background-clip: text;
+    background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    color: var(--color-background);
+    font-size: 1.5vmax;
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-spacing);
+    padding: calc(--stroke-width / 2);
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: var(--stroke-width);
 }

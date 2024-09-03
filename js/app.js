@@ -18,6 +18,9 @@ inputButtNum.forEach(button => {
             equationHolder = "";
             displayNumID.value = "";
             displayCalc.value = "";
+            displayFirst = "";
+            displaySec = "";
+            isNotEqual = true;
         }
         buttDown = button.value;
         let potentialNum = numHolder + buttDown;
@@ -39,6 +42,8 @@ inputButt.forEach(button => {
             numHolder = "";
             buttEquate = "";
             displayCalc.value = "";
+            displayFirst = "";
+            displaySec = "";
             isNotEqual = true;
             return;
         }
@@ -65,11 +70,11 @@ inputButt.forEach(button => {
                     equationHolder -= numHolder;
                 } else if (buttEquate == "X") {
                     equationHolder *= numHolder;
-                } else if (buttEquate == "÷") {
+                } else if (buttEquate == "/") {
                     equationHolder /= numHolder;
                 }
 
-                displayCalc.value = displayFirst;
+                displayCalc.value = displayFirst + " " + buttEquate + " " + displaySec;
                 displayNumID.value = equationHolder;
                 numHolder = "";
             } else {
@@ -82,6 +87,7 @@ inputButt.forEach(button => {
             buttEquate = buttDown;
             isNotEqual = true;
             displayFirst = equationHolder;
+            displaySec = "";
             displayCalc.value = displayFirst + " " + buttEquate + " " + displaySec;
         } else {
             displayNumID.value = equationHolder;
@@ -93,3 +99,4 @@ inputButt.forEach(button => {
         }
     });
 });
+
